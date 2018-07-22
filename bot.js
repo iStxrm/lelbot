@@ -252,6 +252,6 @@ log.send(Embed2).catch(console.error);
 
 //---
 console.log('Starting...')
-bot.login(process.env.TOKEN)
+bot.login(process.env.BOT_TOKEN)
 console.log('Logged in')
 //---
