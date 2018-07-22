@@ -24,7 +24,7 @@ bot.on("message", msg => {
  var Error6 = "Error6: Moderator only, command cancelled.";
 
   //-------------
-    var BannedID = msg.author.id == '247189125797511168';
+    var BannedID = msg.author.id == '001010';
     var Banned = ":x: **You're banned from using Hilton Hotels Bot commands, please send a request to the bot ADMINISTRATORS to appeal your ban. ** :x:";
 
  
