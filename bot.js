@@ -62,7 +62,7 @@ msg.author.send(Embed).catch(console.error);
    let args = msg.content.split(" ").slice(1);
    
         let rUser = msg.guild.member(msg.mentions.users.first());
-        let mod = msg.guild.roles.find('name', "HH Mod") || msg.guild.roles.find('name', "HH Admin");
+        let mod = msg.guild.roles.find('name', "HH Admin");
  
    let reason = args.join(" ").slice(22);
   let role = msg.guild.roles.find('name', reason);
@@ -88,7 +88,7 @@ if (lc.startsWith(prefix + "addrole")) {
  let args = msg.content.split(" ").slice(1);
    
         let rUser = msg.guild.member(msg.mentions.users.first());
-       let mod = msg.guild.roles.find('name', "HH Mod") || msg.guild.roles.find('name', "HH Admin");
+        let mod = msg.guild.roles.find('name', "HH Admin");
    let reason = args.join(" ").slice(22);
   let role = msg.guild.roles.find('name', reason);
     if (BannedID)return msg.channel.send(Banned).catch(console.error);
@@ -159,7 +159,7 @@ nUser.send(`Hey ${nUser} ! ${msg.author} needs you at ${msg.channel} . :eyes: `)
  //-- ban
   if (lc.startsWith(prefix+"ban")){
       
-let role = msg.guild.roles.find('name', "HH Mod") || msg.guild.roles.find('name', "HH Admin");
+        let role = msg.guild.roles.find('name', "HH Admin");
      let args = msg.content.split(" ").slice(1);
      let reason = args.join(" ").slice(22);
      let log = msg.guild.channels.find(`name`, "bot-logs");
@@ -201,7 +201,7 @@ log.send(Embed2).catch(console.error);
  //-- kick
   if (lc.startsWith(prefix+"kick")){
       
-      let role = msg.guild.roles.find('name', "HH Mod") || msg.guild.roles.find('name', "HH Admin");
+        let role = msg.guild.roles.find('name', "HH Admin");
      let args = msg.content.split(" ").slice(1);
      let reason = args.join(" ").slice(22);
      let log = msg.guild.channels.find(`name`, "bot-logs");
