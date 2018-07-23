@@ -7,7 +7,7 @@ const prefix = '-';
 bot.on('ready', () => {
 console.log("Ready");
 bot.user.setActivity(`LOCKDOWN|${prefix}help`);
-bot.user.setStatus(`dnd`);
+bot.user.setStatus(`idle`);
   
 });
 
