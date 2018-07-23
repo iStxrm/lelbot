@@ -24,6 +24,10 @@ bot.on("message", msg => {
  var Error6 = "Error6: Moderator only, command cancelled.";
 
   //-------------
+ var cooldown = new Set();
+ var cdseconds = 10;
+ 
+ //----
     var BannedID = msg.author.id == '001010';
     var Banned = ":x: **You're banned from using Hilton Hotels Bot commands, please send a request to the bot ADMINISTRATORS to appeal your ban. ** :x:";
 
@@ -37,7 +41,18 @@ bot.on("message", msg => {
  
  //-----
  ///--- houses
- if (lc.startsWith(prefix + "houses")){
+ if (lc.startsWith(prefix + "houses"))
+  
+  
+  if (cooldown.has(msg.author.id)){
+                  return             msg.channel.send(":rotating_light: **You have to wait 10 seconds before using the same or another command.** :rotating_light:").catch(console.error);
+  };
+ cooldown.add(msg.author.id);
+ setTimeout((){ 
+            cooldown.delete(msg.author.id)
+            }, cdseconds * 1000);
+  
+
   let args = msg.content.split(" ").slice(1);
    if (BannedID)return msg.channel.send(Banned).catch(console.error);
   var Embed = new Discord.RichEmbed()
